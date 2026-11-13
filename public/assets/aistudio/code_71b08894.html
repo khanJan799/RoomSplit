@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary": "#95002b", "inverse-primary": "#c3c0ff", "on-error": "#ffffff", "surface-dim": "#dad9e3", "on-primary-fixed-variant": "#3323cc", "surface-container-lowest": "#ffffff", "inverse-on-surface": "#f1effa", "outline-variant": "#c7c4d8", "primary-fixed-dim": "#c3c0ff", "inverse-surface": "#2f3038", "on-primary": "#ffffff", "on-surface-variant": "#464555", "on-background": "#1a1b22", "surface-tint": "#4d44e3", "background": "#fbf8ff", "on-tertiary": "#ffffff", "secondary-fixed": "#6ffbbe", "secondary-container": "#6cf8bb", "surface-container-high": "#e8e7f1", "tertiary-fixed-dim": "#ffb2b7", "on-primary-fixed": "#0f0069", "on-surface": "#1a1b22", "on-tertiary-fixed-variant": "#92002a", "on-secondary-container": "#00714d", "surface-container": "#eeedf7", "secondary": "#006c49", "error-container": "#ffdad6", "on-error-container": "#93000a", "surface-variant": "#e3e1ec", "surface-bright": "#fbf8ff", "on-secondary-fixed-variant": "#005236", "primary": "#3525cd", "on-secondary": "#ffffff", "tertiary-fixed": "#ffdadb", "error": "#ba1a1a", "on-tertiary-fixed": "#40000d", "surface-container-low": "#f4f2fd", "tertiary-container": "#bf0f3c", "secondary-fixed-dim": "#4edea3", "primary-container": "#4f46e5", "primary-fixed": "#e2dfff", "surface": "#fbf8ff", "outline": "#777587", "on-tertiary-container": "#ffd0d2", "on-secondary-fixed": "#002113", "surface-container-highest": "#e3e1ec", "on-primary-container": "#dad7ff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "space-lg": "1.5rem", "gutter": "1rem", "space-xl": "2rem", "space-xs": "0.25rem", "gutter-desktop": "1.5rem", "space-md": "1rem", "margin-desktop": "2rem", "margin": "1rem" }, "fontFamily": { "amount-card": ["Inter"], "display-hero": ["Inter"], "label-caps": ["Inter"], "headline-sm": ["Inter"], "body-lg": ["Inter"], "body-md": ["Inter"], "headline-md": ["Inter"], "headline-lg": ["Inter"], "label-md": ["Inter"], "body-sm": ["Inter"], "amount-display": ["Inter"], "display-hero-mobile": ["Inter"], "label-sm": ["Inter"] }, "fontSize": { "amount-card": ["20px", {"lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "display-hero": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "700"}], "label-caps": ["11px", {"lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "600"}], "headline-sm": ["18px", {"lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "body-lg": ["17px", {"lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "400"}], "body-md": ["15px", {"lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400"}], "headline-md": ["22px", {"lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600"}], "headline-lg": ["28px", {"lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "label-md": ["13px", {"lineHeight": "18px", "letterSpacing": "-0.005em", "fontWeight": "500"}], "body-sm": ["13px", {"lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400"}], "amount-display": ["34px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "display-hero-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.025em", "fontWeight": "700"}], "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0em", "fontWeight": "500"}] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;background-color:#fbf8ff;color:#1a1b22;font-family:'Inter',sans-serif;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-background font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-14 px-margin flex items-center justify-between max-w-md mx-auto"><div class="flex items-center gap-space-sm"><img alt="RoomSplit App Icon" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrDQt9jIo-5hWKa20LN8CwqMPESViuEKY2oiQBB7HEHVa_D7fWaNc02RaD7f0q4H4eO7pNAsUPTDTNvmunnJQcLWBWkkUBchsqo8l0tDWGoOxtefbe829gKNHbm1bm-bRnrIBn760g2htiG_r_xV1cA40vlH2e5YAXMpeP2g1weaSc6vcRWjEwDokmuesafRqPimYrs1ZAeg_brPrG1gnfn4eHUVKPeGnSSBxh80Qbae"/><div class="flex flex-col"><span class="font-label-caps text-label-caps uppercase text-primary font-semibold tracking-wider">RoomSplit</span><span class="font-headline-sm text-headline-sm text-on-surface leading-tight">Loans</span></div></div><div class="flex items-center gap-space-sm"><button class="min-h-[44px] min-w-[44px] px-space-sm py-space-xs rounded-full bg-surface-container flex items-center gap-1.5 transition-colors hover:bg-surface-container-high focus:outline-none" type="button"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="font-label-sm text-label-sm text-on-surface font-semibold">Room 65</span><span class="material-symbols-outlined text-[18px] text-on-surface-variant">expand_more</span></button><a class="min-h-[44px] min-w-[44px] flex items-center justify-center rounded-full p-0.5" data-path="profile" href="#"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1Nh2X6d9RkqNFH8Jt4taa47WI5tWjWJW2XzrA6eieI0v0JeWC5uyIFr08c1KRniFEO6uzSyfxzXb5377_tcyijYlbv4hCowcCSWMeS9kUOTuGVnu-enQhoyNCXdpbjeek0mnYFEyjdVSIR4ewTO69z7anKk8k7gU3D8yFEVdHu0vjfEcKYYnP2zfhEO_LKrl84WI-x57XifhwOySPb6ysx7M_IpCfFhjrIzQkySw"/></a></div></div></header><main class="flex-1 flex flex-col relative w-full max-w-md mx-auto px-margin pt-14 pb-28 bg-surface"><div class="flex flex-col w-full gap-space-lg pb-10">
+<!-- Header Banner & Reassurance Notice -->
+<div class="flex flex-col gap-space-xs mt-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[26px]">handshake</span>
+<h1 class="font-headline-md text-headline-md text-on-surface">Personal Loans</h1>
+</div>
+<span class="inline-flex items-center px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">
+        Private 1-on-1
+      </span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-start gap-3 shadow-sm">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5" style="font-variation-settings: 'FILL' 1;">shield_person</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+        Private student borrowing. Completely isolated from shared dorm expenses and Room 65 split balances.
+      </p>
+</div>
+</div>
+<!-- Summary Balance Cards Grid -->
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Lent Card -->
+<div class="flex flex-col justify-between p-space-md rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-outline uppercase font-semibold">Lent Out</span>
+<span class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+</span>
+</div>
+<div class="mt-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">0 IQD</span>
+<p class="font-label-sm text-label-sm text-outline mt-0.5">You lent to others</p>
+</div>
+</div>
+<!-- Borrowed Card -->
+<div class="flex flex-col justify-between p-space-md rounded-xl bg-tertiary-fixed text-on-tertiary-fixed shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-tertiary font-semibold uppercase">You Owe</span>
+<span class="w-7 h-7 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">call_received</span>
+</span>
+</div>
+<div class="mt-space-sm">
+<span class="font-headline-sm text-headline-sm text-tertiary font-bold">7,000 IQD</span>
+<p class="font-label-sm text-label-sm text-on-tertiary-fixed-variant mt-0.5">Original: 10,000 IQD</p>
+</div>
+</div>
+</div>
+<!-- Active Partner Indicator -->
+<div class="flex items-center justify-between px-space-md py-space-sm rounded-lg bg-surface-container">
+<div class="flex items-center gap-space-sm">
+<div class="relative">
+<img class="w-9 h-9 rounded-full object-cover shadow-sm" data-alt="Warm studio photo portrait of a friendly university student named Habib with warm lighting and a neutral dormitory campus background in soft focus" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBv5H6rEK9A9pDziq_1YxhLPLYE7TgSyYrHv6rx_nkaLSMxF1A-1u0QP0rQ4T-PzJ-5dBxZV3Mg-GdUq_zy6xhP98IRDyqWHyHFF5zhqs38LsfQejcFwpK9Z3va8As7oslCYP2z6rXXaI2DBw-HLdsVfFAie6C8K79SqHsk5vHKGnde-FlOf_ccrEsTzKXcIhbtbOI2a44dySMOflDkE8zgcLRnXhQ_NmxDNZKqAT8"/>
+<span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-secondary"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-semibold text-on-surface truncate">Habib · Roommate</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Room 65 · 1 Active Micro-Loan</span>
+</div>
+</div>
+<button class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold active:scale-95 transition-transform" id="open-new-loan-btn" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+      New Loan
+    </button>
+</div>
+<!-- Active Loan Bento Card with Interactive Progress -->
+<div class="flex flex-col rounded-xl bg-surface-container-lowest p-space-lg shadow-sm gap-space-md">
+<div class="flex items-start justify-between">
+<div class="flex flex-col gap-0.5">
+<span class="font-label-caps text-label-caps uppercase text-primary font-bold tracking-wider">Active Agreement</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Habib → Abdullah</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Midterm textbooks &amp; dorm supplies</span>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold">
+        30% Paid
+      </span>
+</div>
+<!-- Loan Metric Split -->
+<div class="flex items-baseline justify-between pt-space-xs">
+<div>
+<span class="font-label-sm text-label-sm text-outline block">Remaining Debt</span>
+<span class="font-amount-display text-amount-display text-primary font-bold tracking-tight">7,000 <span class="font-label-md text-label-md font-normal text-on-surface-variant">IQD</span></span>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm text-outline block">Original Total</span>
+<span class="font-amount-card text-amount-card text-on-surface-variant">10,000 IQD</span>
+</div>
+</div>
+<!-- Dynamic Progress Bar -->
+<div class="flex flex-col gap-1.5">
+<div class="w-full h-3 rounded-full bg-surface-container overflow-hidden p-0.5">
+<div class="h-full rounded-full bg-primary-container transition-all duration-500 ease-out" style="width: 30%;"></div>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm text-outline">
+<span>3,000 IQD returned</span>
+<span>7,000 IQD left</span>
+</div>
+</div>
+<!-- Action Group -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<button class="w-full py-3 px-4 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md font-semibold flex items-center justify-center gap-2 active:scale-[0.98] transition-all shadow-[0_4px_14px_rgba(79,70,229,0.3)]" id="trigger-repay-modal" type="button">
+<span class="material-symbols-outlined text-[18px]">payments</span>
+        Record Repayment
+      </button>
+<button class="w-full py-2.5 px-4 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md font-medium flex items-center justify-center gap-1.5 active:bg-surface-container-high transition-colors" id="scroll-to-history" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+        Audit History (2 Events)
+      </button>
+</div>
+</div>
+<!-- Immutable Loan History Timeline Section -->
+<div class="flex flex-col gap-space-sm pt-space-xs" id="history-section">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-outline text-[20px]">history_edu</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Audit Ledger</h3>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Permanent Record</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<!-- Item 1: Partial Repayment -->
+<div class="flex items-start gap-3 p-space-md rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="w-9 h-9 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+</div>
+<div class="flex-1 flex flex-col min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Partial Repayment</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">+3,000 IQD</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Abdullah returned 3,000 IQD to Habib via Cash.
+          </p>
+<div class="flex items-center justify-between mt-2 pt-2 rounded bg-surface-container-low px-2 py-1 font-label-sm text-label-sm text-outline">
+<span>Oct 21, 2024 · 4:15 PM</span>
+<span class="font-semibold text-on-surface">Balance: 7,000 IQD</span>
+</div>
+</div>
+</div>
+<!-- Item 2: Initial Loan Agreement -->
+<div class="flex items-start gap-3 p-space-md rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="w-9 h-9 rounded-full bg-surface-container-high flex items-center justify-center text-primary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">contract</span>
+</div>
+<div class="flex-1 flex flex-col min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-semibold text-on-surface">New Loan Issued</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">-10,000 IQD</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Abdullah borrowed 10,000 IQD from Habib for midterms textbooks.
+          </p>
+<div class="flex items-center justify-between mt-2 pt-2 rounded bg-surface-container-low px-2 py-1 font-label-sm text-label-sm text-outline">
+<span>Oct 12, 2024 · 8:30 PM</span>
+<span class="font-semibold text-on-surface">Balance: 10,000 IQD</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Reassurance Card: Integrity Pledge -->
+<div class="flex items-center gap-space-sm p-space-md rounded-xl bg-surface-container-high text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[24px]">lock</span>
+<p class="font-label-sm text-label-sm leading-snug">
+      Private loans never delete historical lines. Each settlement produces an append-only digital receipt verified between both students.
+    </p>
+</div>
+<!-- MODAL 1: RECORD REPAYMENT DRAWER / OVERLAY -->
+<div aria-modal="true" class="fixed inset-0 z-50 flex items-end justify-center hidden" id="repay-modal" role="dialog">
+<!-- Backdrop Blur Scrim -->
+<div class="absolute inset-0 bg-inverse-surface/40 backdrop-blur-sm transition-opacity" id="repay-scrim"></div>
+<!-- Sheet Container -->
+<div class="relative w-full max-w-md bg-surface-container-lowest rounded-t-2xl p-space-lg shadow-2xl flex flex-col gap-space-md z-10 max-h-[751px] overflow-y-auto">
+<!-- Drag handle -->
+<div class="w-10 h-1 bg-surface-variant rounded-full mx-auto -mt-2 mb-1"></div>
+<!-- Header -->
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-caps text-label-caps text-primary uppercase font-bold">Safe Settlement</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Record Repayment</h3>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high" id="close-repay-modal" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Parties Pill -->
+<div class="flex items-center justify-between p-3 rounded-xl bg-surface-container-low font-label-sm text-label-sm">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-[11px]">AI</span>
+<span class="text-on-surface font-semibold">Abdullah (Borrower)</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[16px]">arrow_forward</span>
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-bold text-[11px]">H</span>
+<span class="text-on-surface font-semibold">Habib (Lender)</span>
+</div>
+</div>
+<!-- Quick Preset Amounts -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm font-semibold text-on-surface-variant">Select Preset or Custom Amount</label>
+<div class="grid grid-cols-3 gap-2">
+<button class="preset-btn py-2 rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold hover:bg-surface-container-high active:scale-95 transition-all" data-amount="2000" type="button">2,000 IQD</button>
+<button class="preset-btn py-2 rounded-lg bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold hover:bg-primary-fixed active:scale-95 transition-all" data-amount="3000" type="button">3,000 IQD</button>
+<button class="preset-btn py-2 rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold hover:bg-surface-container-high active:scale-95 transition-all" data-amount="7000" type="button">7,000 (Full)</button>
+</div>
+</div>
+<!-- Amount Input with Live Math -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm font-semibold text-on-surface-variant" for="repay-amount-input">Amount to Return (IQD)</label>
+<div class="flex items-center px-4 py-2.5 rounded-lg bg-surface-container-low focus-within:ring-2 focus-within:ring-primary-container">
+<input class="w-full bg-transparent font-amount-card text-amount-card text-on-surface outline-none" id="repay-amount-input" max="7000" min="500" step="500" type="number" value="3000"/>
+<span class="font-label-md text-label-md font-bold text-outline">IQD</span>
+</div>
+</div>
+<!-- Live Math Calculation Box -->
+<div class="p-space-md rounded-xl bg-surface-container text-on-surface flex flex-col gap-1.5">
+<span class="font-label-caps text-label-caps uppercase text-outline font-semibold">Live Math Preview</span>
+<div class="font-body-sm text-body-sm text-on-surface font-mono font-medium leading-relaxed" id="live-math-display">
+          Current Debt: 7,000 IQD − Repaying: 3,000 IQD = <strong class="text-primary font-semibold">Remaining: 4,000 IQD</strong>
+</div>
+</div>
+<!-- Audit Notice -->
+<p class="font-label-sm text-label-sm text-outline leading-tight">
+        Never deletes original loan. Records dedicated repayment transaction in permanent history.
+      </p>
+<!-- Submit Repayment Button -->
+<button class="w-full py-3.5 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md font-semibold flex items-center justify-center gap-2 active:scale-98 transition-transform" id="confirm-repayment-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+        Confirm &amp; Record Repayment
+      </button>
+</div>
+</div>
+<!-- MODAL 2: RECORD NEW 1-ON-1 LOAN DRAWER -->
+<div aria-modal="true" class="fixed inset-0 z-50 flex items-end justify-center hidden" id="new-loan-modal" role="dialog">
+<div class="absolute inset-0 bg-inverse-surface/40 backdrop-blur-sm transition-opacity" id="new-loan-scrim"></div>
+<div class="relative w-full max-w-md bg-surface-container-lowest rounded-t-2xl p-space-lg shadow-2xl flex flex-col gap-space-md z-10 max-h-[795px] overflow-y-auto">
+<div class="w-10 h-1 bg-surface-variant rounded-full mx-auto -mt-2 mb-1"></div>
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-caps text-label-caps text-secondary uppercase font-bold">1-on-1 Contract</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Record New Loan</h3>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high" id="close-new-loan-modal" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Borrower & Lender Selectors -->
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-medium">Borrower</label>
+<select class="w-full py-2.5 px-3 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface outline-none">
+<option selected="">Abdullah Iman (Me)</option>
+<option>Habib (Room 65)</option>
+<option>Mustafa (Dorm 4)</option>
+</select>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-medium">Lender</label>
+<select class="w-full py-2.5 px-3 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface outline-none">
+<option selected="">Habib (Room 65)</option>
+<option>Abdullah Iman (Me)</option>
+<option>Mustafa (Dorm 4)</option>
+</select>
+</div>
+</div>
+<!-- Amount -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-medium">Principal Amount (IQD)</label>
+<div class="flex items-center px-4 py-2 rounded-lg bg-surface-container-low focus-within:ring-2 focus-within:ring-primary-container">
+<input class="w-full bg-transparent font-headline-sm text-headline-sm text-on-surface outline-none" placeholder="10,000" type="number"/>
+<span class="font-label-md text-label-md text-outline font-semibold">IQD</span>
+</div>
+</div>
+<!-- Reason/Description -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-medium">Reason / Item</label>
+<input class="w-full px-4 py-2.5 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface outline-none" placeholder="e.g. Textbook printing &amp; bus fare" type="text" value="Textbook printing &amp; bus fare"/>
+</div>
+<!-- Date -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-medium">Transaction Date</label>
+<input class="w-full px-4 py-2.5 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface outline-none" type="date" value="2024-10-24"/>
+</div>
+<!-- Isolation Disclaimer Notice -->
+<div class="p-space-sm rounded-lg bg-surface-container flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-[18px]">info</span>
+<span class="font-label-sm text-label-sm text-outline">
+          This transaction will NOT count as a shared room expense.
+        </span>
+</div>
+<!-- Submit Loan Button -->
+<button class="w-full py-3.5 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md font-semibold flex items-center justify-center gap-2 active:scale-98 transition-transform" id="confirm-new-loan-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+        Save Private Loan
+      </button>
+</div>
+</div>
+<!-- Toast Notification Pill (Hidden by Default) -->
+<div class="fixed top-20 left-1/2 -translate-x-1/2 z-50 hidden bg-inverse-surface text-inverse-on-surface px-4 py-2 rounded-full font-label-sm text-label-sm shadow-xl flex items-center gap-2 transition-all" id="toast-pill">
+<span class="material-symbols-outlined text-[16px] text-secondary-fixed">check_circle</span>
+<span id="toast-text">Repayment recorded in ledger</span>
+</div>
+</div>
+<script>
+  (function initLoanInteractions() {
+    const repayModal = document.getElementById('repay-modal');
+    const repayScrim = document.getElementById('repay-scrim');
+    const triggerRepayBtn = document.getElementById('trigger-repay-modal');
+    const closeRepayBtn = document.getElementById('close-repay-modal');
+    const repayInput = document.getElementById('repay-amount-input');
+    const liveMathDisplay = document.getElementById('live-math-display');
+    const presetBtns = document.querySelectorAll('.preset-btn');
+    const confirmRepaymentBtn = document.getElementById('confirm-repayment-btn');
+
+    const newLoanModal = document.getElementById('new-loan-modal');
+    const newLoanScrim = document.getElementById('new-loan-scrim');
+    const openNewLoanBtn = document.getElementById('open-new-loan-btn');
+    const closeNewLoanBtn = document.getElementById('close-new-loan-modal');
+    const confirmNewLoanBtn = document.getElementById('confirm-new-loan-btn');
+
+    const scrollToHistoryBtn = document.getElementById('scroll-to-history');
+    const historySection = document.getElementById('history-section');
+    const toastPill = document.getElementById('toast-pill');
+    const toastText = document.getElementById('toast-text');
+
+    const baseRemainingDebt = 7000;
+
+    function showToast(message) {
+      toastText.textContent = message;
+      toastPill.classList.remove('hidden');
+      setTimeout(() => {
+        toastPill.classList.add('hidden');
+      }, 2800);
+    }
+
+    function updateLiveMath(amountVal) {
+      const parsed = parseInt(amountVal, 10) || 0;
+      const safeAmount = Math.min(Math.max(parsed, 0), baseRemainingDebt);
+      const remainingAfter = baseRemainingDebt - safeAmount;
+      liveMathDisplay.innerHTML = `Current Debt: 7,000 IQD − Repaying: ${safeAmount.toLocaleString()} IQD = <strong class="text-primary font-semibold">Remaining: ${remainingAfter.toLocaleString()} IQD</strong>`;
+    }
+
+    if (triggerRepayBtn && repayModal) {
+      triggerRepayBtn.addEventListener('click', () => {
+        repayModal.classList.remove('hidden');
+      });
+    }
+
+    const closeRepay = () => repayModal.classList.add('hidden');
+    if (closeRepayBtn) closeRepayBtn.addEventListener('click', closeRepay);
+    if (repayScrim) repayScrim.addEventListener('click', closeRepay);
+
+    if (repayInput) {
+      repayInput.addEventListener('input', (e) => {
+        updateLiveMath(e.target.value);
+      });
+    }
+
+    presetBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const val = btn.getAttribute('data-amount');
+        if (repayInput) {
+          repayInput.value = val;
+          updateLiveMath(val);
+        }
+      });
+    });
+
+    if (confirmRepaymentBtn) {
+      confirmRepaymentBtn.addEventListener('click', () => {
+        closeRepay();
+        showToast('Recorded ' + (repayInput ? repayInput.value : '3,000') + ' IQD repayment in audit ledger!');
+      });
+    }
+
+    if (openNewLoanBtn && newLoanModal) {
+      openNewLoanBtn.addEventListener('click', () => {
+        newLoanModal.classList.remove('hidden');
+      });
+    }
+
+    const closeNewLoan = () => newLoanModal.classList.add('hidden');
+    if (closeNewLoanBtn) closeNewLoanBtn.addEventListener('click', closeNewLoan);
+    if (newLoanScrim) newLoanScrim.addEventListener('click', closeNewLoan);
+
+    if (confirmNewLoanBtn) {
+      confirmNewLoanBtn.addEventListener('click', () => {
+        closeNewLoan();
+        showToast('Private agreement created outside room expenses.');
+      });
+    }
+
+    if (scrollToHistoryBtn && historySection) {
+      scrollToHistoryBtn.addEventListener('click', () => {
+        historySection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    }
+  })();
+</script><footer class="w-full py-space-md text-center mt-auto"><span class="font-label-sm text-label-sm text-outline">RoomSplit · Created by AB Iman</span></footer></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/80 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.05)]" data-active-classes="text-primary font-semibold"><div class="max-w-md mx-auto h-20 px-space-xs flex items-center justify-between relative"><a class="flex-1 flex flex-col items-center justify-center min-h-[44px] min-w-[44px] gap-1 text-on-surface-variant transition-colors hover:text-on-surface" data-path="home-groups" href="#"><span class="material-symbols-outlined text-[24px]">grid_view</span><span class="font-label-sm text-label-sm">Groups</span></a><a class="flex-1 flex flex-col items-center justify-center min-h-[44px] min-w-[44px] gap-1 text-on-surface-variant transition-colors hover:text-on-surface" data-path="expenses" href="#"><span class="material-symbols-outlined text-[24px]">receipt_long</span><span class="font-label-sm text-label-sm">Expenses</span></a><div class="flex-1 flex items-center justify-center relative"><a aria-label="Quick Add Expense or Loan" class="w-14 h-14 -mt-5 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-[0_8px_20px_rgba(79,70,229,0.35)] transition-transform active:scale-95" data-path="add-action" href="#"><span class="material-symbols-outlined text-[28px]">add</span></a></div><a aria-current="page" class="flex-1 flex flex-col items-center justify-center min-h-[44px] min-w-[44px] gap-1 transition-colors text-primary font-semibold" data-path="loans" href="#"><span class="material-symbols-outlined text-[24px]">handshake</span><span class="font-label-sm text-label-sm">Loans</span></a><a class="flex-1 flex flex-col items-center justify-center min-h-[44px] min-w-[44px] gap-1 text-on-surface-variant transition-colors hover:text-on-surface" data-path="settlement" href="#"><span class="material-symbols-outlined text-[24px]">balance</span><span class="font-label-sm text-label-sm">Settle</span></a></div></nav></body></html>
